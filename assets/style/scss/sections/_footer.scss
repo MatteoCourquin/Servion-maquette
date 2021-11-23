@@ -1,0 +1,104 @@
+// **** FOOTER **** //
+// ================ //
+
+.bg-footer{
+    z-index: -1;
+    position: relative;
+    img{
+        position: absolute;
+        height: 100vh;
+        @include respoM{
+            height: 170vh;
+        }
+        min-height: 650px;
+        width: 100vw;
+    }
+}
+
+footer{
+    nav{
+        transform: translateY(40vh);
+        width: 100%;
+        @include respoM{
+            transform: translateY(20vh);
+        }
+        .links-footer{
+            @extend %flex-center;
+            justify-content: space-around;
+            @include respoM{
+                justify-content: start;
+            }
+            flex-wrap: wrap;
+            ul{
+                margin: 30px;
+                display: inline-block;
+                &:nth-child(4){
+                    grid-column: 4/6;
+                }
+                .credit-card{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    li{
+                        margin: 5px;
+                        img{
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+            h4{
+                color: $light;
+                margin-bottom: 10px;
+            }
+        }
+        .footer-infos{
+            margin: 100px;
+            @include respoM{
+                margin: 20px;
+            }
+            display: flex;
+            justify-content: space-between;
+            img{
+                position: relative;
+                width: 150px;
+                @include respoM{
+                    width: 100px;
+                }
+            }
+            address{
+                @extend %nunito-regular;
+                font-style: normal;
+                font-size: calc(10px + 0.5vw);
+                color: $light;
+            }
+            .socials-medias{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                div{
+                    &:nth-child(1){
+                        margin-right: 20px;
+                    }
+                }
+                img{
+                    height: 30px;
+                    width: auto;
+                    margin: 5px;
+                    @include respoM{
+                        margin: 0px;
+                    }
+                }
+                .txt-medias{
+                    display: flex;
+                    p{
+                        padding: 5px 20px;
+                        &:nth-child(1){
+                            border-right: 1px solid $light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

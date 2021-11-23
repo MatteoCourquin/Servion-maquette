@@ -1,0 +1,40 @@
+// **** BUTTONS **** //
+// ================= //
+
+.btn-white{
+    @extend %flex-center; 
+    width: fit-content;
+    font-size: 2em;
+    background: $light;
+    color: $light-Blue;
+    padding: 10px 20px;
+    border-radius: $radius;
+    cursor: pointer;
+    @extend %nunito-bold;
+    outline: none;
+    border: none;
+    svg{
+        padding: 0 10px;
+        height: 15px;
+        fill: $light-Blue
+    }
+}
+
+.btn-blue{
+    @extend %flex-center; 
+    width: fit-content;
+    font-size: 1.8em;
+    background: $light-Blue;
+    color: $light;
+    padding: 10px 20px;
+    border-radius: $radius;
+    cursor: pointer;
+    @extend %nunito-regular;
+    outline: none;
+    border: none;
+    svg{
+        padding: 0 10px;
+        height: 15px;
+        fill: $light
+    }
+}

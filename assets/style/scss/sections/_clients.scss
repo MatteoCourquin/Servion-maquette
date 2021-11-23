@@ -1,0 +1,19 @@
+// **** CLIENTS **** //
+// ================= //
+
+.clients{
+    margin: 50px 0;
+    @extend %flex-center;
+    flex-direction: column;
+    a{
+        margin: 40px
+    }
+}
+
+.logos-clients{
+    @extend %flex-center;
+    flex-wrap: wrap;
+    img{
+        margin: 20px;
+    }
+}

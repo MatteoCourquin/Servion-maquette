@@ -1,0 +1,17 @@
+// **** FORMS **** //
+// =============== //
+
+.input-blue{
+    color: $light;
+    background: $dark-Blue;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: $radius;
+    @extend %nunito-regular;
+    font-size: 2em;
+    &::placeholder{
+        color: $light;
+    }
+}

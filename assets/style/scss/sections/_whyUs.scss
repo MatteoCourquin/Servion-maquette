@@ -1,0 +1,70 @@
+// **** WHYUS **** //
+// =============== //
+
+.why-us{
+    margin-top: 50vh;
+}
+
+.content-why-us{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: fit-content;
+    @include respoXL{
+        grid-template-columns: 1fr;
+    }
+    .skills-why-us{
+        height: 100%;
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include respoXS{
+            margin: 0 10px;
+        }
+        p{
+            margin: 20px 0;
+        }
+        .items-skills-why-us{
+            display: flex;
+            img{
+                width: 60px;
+                height: fit-content;
+                margin: 0 30px;
+                @include respoXS{
+                    margin: 0 10px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .illustration-why-us{
+        @include respoXS{
+            display: none;
+        }
+        position: relative;
+        display: flex;
+        max-height: 400px;
+        margin-top: 30px;
+        img{
+            &:nth-child(1){
+                width: 15%;
+                height: auto;
+                transform: translate(70%, 50px);
+                align-self: flex-end;
+                justify-self: flex-end;
+            }
+            &:nth-child(2){
+                width: 70%;
+                height: fit-content;
+            }
+            &:nth-child(3){
+                width: 15%;
+                height: auto;
+                transform: translate(-70%, -30px);
+                align-self: flex-start;
+                justify-self: flex-start;
+            }
+        }
+    }
+}

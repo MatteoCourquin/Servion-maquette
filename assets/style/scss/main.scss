@@ -1,0 +1,37 @@
+// **** ABSTRACTS **** //
+// =================== //
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+@import "./abstracts/variables";
+
+// **** BASE **** //
+// ============== //
+@import "./base/reset";
+@import "./base/typography";
+
+// **** COMPONENTS **** //
+// ==================== //
+@import "./components/buttons";
+@import "./components/forms";
+@import "./components/carousel";
+@import "./components/cover";
+@import "./components/dropdown";
+
+// **** PAGES **** //
+// =============== //
+@import "./pages/page";
+
+// **** SECTIONS **** //
+// ================== //
+@import "./sections/header";
+@import "./sections/hero";
+@import "./sections/whyUs";
+@import "./sections/support";
+@import "./sections/services";
+@import "./sections/testimonials";
+@import "./sections/clients";
+@import "./sections/footer";
+
+
+// sass --watch assets/style/sass/main.scss:assets/style/css/main.css

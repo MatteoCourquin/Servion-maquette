@@ -1,0 +1,100 @@
+// **** HEADER **** //
+// ================ //
+
+
+.bg-header{
+    z-index: -1;
+    position: relative;
+    img{
+        position: absolute;
+        height: 100vh;
+        min-height: 650px;
+        width: 100vw;
+    }
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 999;
+    img{
+        padding: 30px 0 0 30px;
+        @include respoXS{
+            width: 40%;   
+        }
+    }
+
+    .icone-burger{
+        margin: 30px;
+        @include size(50px, 30px);
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        .lignes-burger{
+            @include size(100%, 2px);
+            border-radius: $radius;
+            background: $light;
+        }
+    }
+    ul li{
+        display: inline-block;
+        margin: 0 30px;
+        &:nth-child(1){
+            background: $light-Blue;
+        }
+        &:not(:nth-child(5)){
+            padding: 40px 15px 10px 15px;
+            border-radius: 0 0 $radius $radius;
+            &:hover{
+                background: $light-Blue;
+            }
+        }
+    }
+    @include respoXL{
+        .icone-burger{
+            display: flex;
+            z-index: 99;
+        }
+        .icone-burger.active{
+            transform: translateX(15px);
+            .lignes-burger:nth-child(1){
+                transform: rotate(45deg) translateY(20px);
+            }
+            .lignes-burger:nth-child(2){
+                opacity: 0;
+            }
+            .lignes-burger:nth-child(3){
+                transform: rotate(-45deg) translateY(-20px);
+            }
+        }
+        ul.show-close{
+            display: flex;
+        }
+        ul{
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            background: $middle-Blue;
+            padding-bottom: 30px;
+            width: 100%;
+            li{
+                &:not(:nth-child(5)){
+                    border-radius: $radius;
+                    padding: 20px 20px;
+                    margin-top: 20px;
+                }
+                &:nth-child(5){
+                    margin-top: 35px;
+                }
+            }
+            &:hover{
+                li{
+                    &:nth-child(1){
+                        background: $light-Blue;
+                    }
+                }
+            }
+        }
+    }
+}

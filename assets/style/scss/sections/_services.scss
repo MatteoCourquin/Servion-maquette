@@ -1,0 +1,67 @@
+// **** SERVICES **** //
+// ================== //
+
+.services{
+    margin: 100px 0;
+    @extend %flex-center;
+    flex-direction: column;
+}
+.details-services{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-services{
+    margin: 20px;
+    width: 300px;
+    flex-shrink: 0;
+    height: fit-content;
+    text-align: center;
+    @extend %flex-center;
+    flex-direction: column;
+    box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.11);
+    border-radius: $radius;
+    transition: 0.3s;
+    img{
+        margin-top: 40px;
+    }
+    h4{
+        margin: 20px 0;
+    }
+    p{
+        padding: 0 10px;
+        &:not(:nth-child(1)){
+            margin-bottom: 20px;
+        }
+    }
+    .price{
+        border-top: 1px solid rgba(0, 0, 0, 0.11);
+        width: 100%;
+        padding: 20px 0;
+        @extend %flex-center;
+        flex-direction: column;
+        span{
+            @extend %nunito-regular;
+            font-size: calc(16px + 1vw);
+        }
+    }
+    a{
+        background-color: $extra-light-Blue;
+        margin-bottom: 30px;
+        display: none;
+    }
+    &:hover{
+        a{
+            display: block;
+        }
+        border-top: 10px solid $light-Blue;
+    }
+    &:nth-child(2){
+        a{
+            display: block;
+        }
+        border-top: 10px solid $light-Blue;
+    }
+}

@@ -1,0 +1,62 @@
+// **** HERO **** //
+// ============== //
+
+
+.hero{
+    margin-top: 100px;
+    color: $light;
+    @extend %flex-center;
+    justify-content: space-around;
+    img{
+        width: 50%;
+        @include respoXL{
+            display: none;
+        }
+    }
+    span{
+        margin: 10px 0;
+        @extend %nunito-regular;
+        font-size: calc(10px + 1.5vw);
+    }
+}
+
+.txt-hero{
+    margin-left: 50px;
+    @include respoXL{
+        margin: 20px;
+    }
+}
+
+form{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    .input-blue{
+        &:nth-child(1){
+            border-radius: $radius 0 0 $radius;
+            width: 400px;
+            margin-right: 2px;
+        }
+        &:nth-child(2){
+            border-radius: 0 $radius $radius 0;
+            margin-right: 20px;
+        }
+    }
+    @include respoXS{
+        flex-direction: column;
+        align-items: center;
+        .input-blue{
+            &:nth-child(1){
+                width: 300px;
+                border-radius: $radius $radius 0 0;
+                margin-bottom: 2px;
+            }
+            &:nth-child(2){
+                border-radius: 0 0 $radius $radius;
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 300px;
+            }
+        }
+    }
+}

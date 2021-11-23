@@ -1,0 +1,84 @@
+// **** TESTIMONIALS **** //
+// ====================== //
+
+.testimonials{
+    background: $extra-light-Blue;
+    position: relative;
+    @extend %flex-center;
+    flex-direction: column;
+    padding-top: 70px;
+    .testimonials-dotted-square{
+        width: 180px;
+        position: absolute;
+        @include respoXL{
+            width: 100px;
+        }
+        &:nth-child(1){
+            align-self: flex-end;
+            transform: translateY(-150%);
+            @include respoXL{
+                transform: translateY(-350%);
+            }
+        }
+        &:nth-child(6){
+            transform: translateY(110%);
+            align-self: flex-start;
+            @include respoXL{
+                transform: translateY(250%);
+            }
+        }
+    }
+    .dotted-nav{
+        @extend %flex-center;
+        margin-bottom: 50px;
+        .dot{
+            margin: 10px;
+            @include size (10px, 10px);
+            border-radius: 999px;
+            background: darken($extra-light-Blue, 8%);
+            &:nth-child(3){
+                @include size (15px, 15px);
+                background: $light-Blue;
+            }
+            &:hover{
+                @include size (15px, 15px);
+                background: $light-Blue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.container-testimonials{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px;
+    @include respoM{
+        margin: 70px 20px;
+        grid-template-columns: 1fr;
+    }
+    span{
+        @extend %nunito-bold;
+        font-size: calc(7px + 0.8vw);
+    }
+}
+.card-testimonials{
+    display: flex;
+    max-width: 600px;
+    margin: 0 10px;
+    img{
+        width: fit-content;
+        height: fit-content;
+        @include respoM{
+            width: 70px;
+        }
+    }
+    .comment{
+        img{
+            margin-top: 20px;
+        }
+        p{
+            margin: 10px 0;
+        }
+    }
+}

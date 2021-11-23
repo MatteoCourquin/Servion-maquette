@@ -1,0 +1,41 @@
+// **** TYPO **** //
+// ============== //
+
+a{
+    @extend %nunito-regular;
+    color: $light;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+h1{
+    @extend %roboto-bold;
+    font-size: calc(16px + 2.6vw);
+}
+h2, h3{
+    color: $dark;
+    text-align: center;
+}
+h2{
+    @extend %nunito-extrBold;
+    font-size: calc(16px + 1.6vw);
+}
+h3{
+    @extend %nunito-regular;
+    font-size: calc(16px + 1vw);
+    margin-bottom: 70px;
+}
+h4{
+    @extend %nunito-bold;
+    font-size: calc(10px + 0.7vw);
+}
+p{
+    @extend %nunito-regular;
+    font-size: calc(10px + 0.5vw);
+}
+p.dark{
+    color: $dark;
+}
+p.light{
+    color: $light;
+}
