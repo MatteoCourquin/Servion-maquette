@@ -11,6 +11,7 @@
     border-radius: $radius;
     @extend %nunito-regular;
     font-size: 2em;
+    -webkit-appearance: none;
     &::placeholder{
         color: $light;
     }

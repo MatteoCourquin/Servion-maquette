@@ -127,6 +127,7 @@ p.light {
   height: 50px;
   border-radius: 5px;
   font-size: 2em;
+  -webkit-appearance: none;
 }
 .input-blue::placeholder {
   color: #fff;
