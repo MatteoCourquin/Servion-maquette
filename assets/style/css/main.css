@@ -262,7 +262,7 @@ form {
 }
 form .input-blue:nth-child(1) {
   border-radius: 5px 0 0 5px;
-  width: 400px;
+  width: 300px;
   margin-right: 2px;
 }
 form .input-blue:nth-child(2) {
